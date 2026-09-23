@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rasc — A scratchpad for unfinished thoughts</title>
+  <meta name="description" content="A Mac scratchpad for unfinished thoughts. Capture a thought before you know what it should become. Refine it without a prompt. Keep what matters, then move on.">
+  <meta name="theme-color" content="#F7F4EE">
+  <link rel="icon" href="assets/symbol.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-bar">
+      <a class="brand" href="#top">
+        <img src="assets/symbol.png" alt="" width="28" height="34">
+        <span>Rasc</span>
+      </a>
+      <a class="button" href="#request">Request beta access</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Rasc for Mac</p>
+          <h1>A scratchpad for unfinished thoughts.</h1>
+          <p class="lede">Capture a thought before you know what it should become. Refine it without a prompt. Keep what matters, then move on.</p>
+          <a class="button" href="#request">Request beta access</a>
+          <p class="trust-line">Native Mac app · No account · Local by default</p>
+          <p class="compat">Refine requires Apple Intelligence. The rest of Rasc does not.</p>
+        </div>
+        <figure class="hero-figure">
+          <img src="assets/capture.png" alt="The Rasc scratchpad open over the desktop, with an unfinished thought in the editor.">
+          <div class="keycaps" aria-hidden="true">
+            <span>⌥\</span>
+            <span>⌘J</span>
+            <span>⇧⌘K</span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="editorial">
+      <div class="shell">
+        <div class="editorial-column">
+          <h2>Not every thought is a note yet.</h2>
+          <p>Ideas arrive half-formed. A message you might send. Something you need to remember. A task that may become important. A sentence that still isn’t right.</p>
+          <p>They’re worth capturing, but not worth organizing yet.</p>
+          <p class="statement">Rasc gives unfinished thoughts somewhere to exist before you decide what they should become.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="loop" id="how">
+      <div class="shell loop-grid">
+        <div class="loop-copy">
+          <article class="step is-on" data-step="capture">
+            <p class="step-name">Capture</p>
+            <h3>Write before you organize.</h3>
+            <p>Press <kbd>⌥\</kbd> from anywhere. Rasc appears ready for whatever is on your mind.</p>
+            <p>No title, folder, or destination required.</p>
+            <figure class="step-figure">
+              <img src="assets/capture.png" alt="Scratchpad with an unfinished thought, before Refine.">
+            </figure>
+          </article>
+
+          <article class="step" data-step="refine">
+            <p class="step-name">Refine</p>
+            <h3>Shape it without prompting.</h3>
+            <p>When the wording needs work, press <kbd>⌘J</kbd>.</p>
+            <p>Rasc refines the text on-device and shows you the result before anything changes.</p>
+            <p class="step-constraint">No prompt. No tool picker. No AI chat.</p>
+            <figure class="step-figure">
+              <img src="assets/refine.png" alt="Refine preview in Rasc, with the proposed wording still waiting for Accept or Cancel.">
+            </figure>
+          </article>
+
+          <article class="step" data-step="keep">
+            <p class="step-name">Keep</p>
+            <h3>Settle it and move on.</h3>
+            <p>When the thought feels finished, Keep it.</p>
+            <p>Rasc gets out of the way, the thought stays retrievable, and your next scratch starts fresh.</p>
+          </article>
+        </div>
+
+        <div class="loop-stage">
+          <img class="is-on" data-visual="capture" src="assets/capture.png" alt="">
+          <img data-visual="refine" src="assets/refine.png" alt="">
+        </div>
+      </div>
+      <div class="shell">
+        <p class="loop-close">Capture → Refine → Keep. Nothing to organize up front.</p>
+      </div>
+    </section>
+
+    <section class="distinction">
+      <div class="shell distinction-grid">
+        <h2>A scratchpad, not another system.</h2>
+        <div>
+          <p>No folders to set up. No prompt to write. No account to maintain.</p>
+          <p>And no need to decide where a thought belongs before you’ve even finished thinking it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="retrieval">
+      <div class="shell">
+        <h2>Pick it up later.</h2>
+        <p class="section-copy">Unfinished or kept, your thoughts stay easy to recover.</p>
+        <p class="section-copy">Open Home or Search when you need one again — without turning Rasc into a system you have to maintain.</p>
+        <figure class="retrieval-figure">
+          <img src="assets/home.png" alt="The Rasc Home window, with search and New Scratch. This capture is the empty Home, before any notes.">
+        </figure>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="shell">
+        <h2>Your thoughts stay on your Mac.</h2>
+        <p class="section-copy">Notes are stored locally. Refine runs with Apple Foundation Models on-device. No account. No cloud AI.</p>
+        <div class="proof">
+          <div>
+            <h3>Native macOS</h3>
+            <p>Built as a real Mac app.</p>
+          </div>
+          <div>
+            <h3>On-device Refine</h3>
+            <p>Refine uses Apple Foundation Models locally.</p>
+          </div>
+          <div>
+            <h3>No account</h3>
+            <p>Install and use Rasc without creating an account.</p>
+          </div>
+        </div>
+        <p class="compat compat-block">Apple Intelligence is required for Refine only. Capture, Keep, Home, Search and the rest of Rasc remain available without it.</p>
+      </div>
+    </section>
+
+    <section class="final" id="request">
+      <div class="shell final-column">
+        <h2>Give unfinished thoughts somewhere to land.</h2>
+        <p>Capture them before they become notes. Shape them when they need it. Keep only what matters.</p>
+        <a class="button" href="#request">Request beta access</a>
+        <p class="trust-line">Native Mac app · No account · Local by default</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="site.js"></script>
+</body>
+</html>

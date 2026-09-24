@@ -105,6 +105,70 @@ h1, h2, h3 {
 
 .hero { padding: 104px 0 72px; }
 
+.line-mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+}
+
+.line-mask > span {
+  display: block;
+  transform: translateY(115%);
+  animation: line-in 0.95s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero h1 .line-mask:nth-child(2) > span { animation-delay: 0.28s; }
+
+.rise {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: rise-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0s) forwards;
+}
+
+.enter {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.enter.is-in {
+  animation: rise-in 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.proof > div:nth-child(2).is-in { animation-delay: 0.1s; }
+.proof > div:nth-child(3).is-in { animation-delay: 0.18s; }
+
+.sheen.enter.is-in {
+  background-image: linear-gradient(
+    105deg,
+    var(--ink) 0%,
+    var(--ink) 38%,
+    var(--orange) 50%,
+    var(--ink) 62%,
+    var(--ink) 100%
+  );
+  background-size: 240% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation:
+    rise-in 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+    sheen 2.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+@keyframes line-in {
+  to { transform: translateY(0); }
+}
+
+@keyframes rise-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sheen {
+  from { background-position: 100% 0; }
+  to { background-position: 0% 0; }
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 5fr 7fr;
@@ -121,7 +185,7 @@ h1, h2, h3 {
 
 .hero h1 {
   font-size: 68px;
-  max-width: 11ch;
+  max-width: 12ch;
   margin-bottom: 22px;
 }
 
@@ -369,4 +433,16 @@ kbd {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .loop-stage img { transition: none; }
+  .line-mask > span,
+  .rise,
+  .enter,
+  .enter.is-in,
+  .sheen.enter.is-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    background: none;
+    -webkit-text-fill-color: var(--ink);
+    color: var(--ink);
+  }
 }

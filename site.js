@@ -27,3 +27,23 @@ if (stage && window.matchMedia("(min-width: 900px)").matches) {
 
   steps.forEach((step) => observer.observe(step));
 }
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const entrances = document.querySelectorAll(".enter");
+
+if (reduceMotion) {
+  entrances.forEach((node) => node.classList.add("is-in"));
+} else {
+  const entranceObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        entranceObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  entrances.forEach((node) => entranceObserver.observe(node));
+}
